@@ -1,0 +1,58 @@
+.showImg{
+    width:150px;
+    height:150px;
+    margin-top: 5%;
+}
+
+.card {
+    box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    max-height: 400px;
+    
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-top: 8%;
+    border-radius: 25px;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0 0 15px 15px;
+}
+
+.card button:hover {
+    background-color: #26272b;
+    opacity: 0.7;
+}
+.card_to_right{
+    float:right;
+    margin-bottom: 3%;
+}
+h4{
+    text-decoration-line: line-through;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 659px){
+    
+    .card_to_right{
+        float:none;
+        margin-bottom: 10%;
+    }
+}
+
+

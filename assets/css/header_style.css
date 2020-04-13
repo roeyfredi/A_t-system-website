@@ -1,0 +1,116 @@
+*{
+    direction: ltr;
+}
+.img_logo{
+    height: 80px;
+    width: 200px;
+    float:right;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+li{
+    font-size: 16px;
+}
+.img_logo_2{
+    height: 80px;
+    width: 300px;
+    float:left;
+    margin-left:5%;
+    margin-top: 2%;
+}
+.clear{
+    margin-bottom: 30px;
+    clear:both;
+}
+.container-fluid{
+    background-color: #26272B;
+}
+.menu_a{
+    display: inline-block;
+}
+.text_to_the_right{
+    text-align: right;
+}
+#sign_in{
+    display: inline-block;
+    width:55%;
+    float:right;
+}
+#registration{
+    display: inline-block;
+    width:55%;
+    float:right;
+}
+.li_color{
+    color:black;
+    font-weight: bold;
+}
+.navbar{
+    margin-bottom: 0px !important;
+}
+
+
+@media only screen and (max-width: 765px) {
+    .navbar-header{
+        display: inline-block;
+    }
+
+    #signin_signup{
+        float:left;
+        margin-top: 2%;
+        float:clear;
+
+    }
+
+    .info
+    {
+        display: inline-block;
+        width:85%;
+    }
+
+    #my_profile{
+        position:absolute;
+        top:0px;
+        left:0px;
+        display: inline-block;    
+        margin-top: 2%;
+    }
+
+    #my_cart_shopping{
+        position:absolute;
+        top:0px;
+        left:30%;
+        margin-top: 2%;
+    }
+
+    .column-reverse { 
+        display: flex; 
+        flex-direction: column-reverse;
+    }
+    #sign_in{
+        display: inline-block;
+        width:55%;
+        float:left;
+        text-align: right;
+        padding-right: 20px;
+    }
+    #registration{
+        display: inline-block;
+        width:55%;
+        float:left;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .img_logo_2{
+        display: none;
+    }
+    .img_logo{
+        float:none;
+        display: block;
+        margin-right:auto;
+        margin-left: auto;
+    }
+}
+
+
+

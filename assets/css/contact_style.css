@@ -1,0 +1,54 @@
+#form_container{
+    padding:15px 15px;
+    margin-top:15px;
+    color:#ffffff;
+    background-color: white;
+    color:black;
+    opacity: 0.95;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
+}
+
+.backgroundImg{
+    background-image: url("../images/backgroundContact.jpg");
+    background-color: #000;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    margin-top: 0px!important;
+}
+.upload-btn-wrapper{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.direction{
+    direction: rtl !important;
+}
+input{
+    float:right !important;
+}
+.contact_button{
+    width:100%;
+    background-color: #449d44;
+    color: white;
+}
+.contact_button:hover{
+    background-color: #0C690C ;
+    color: white;
+}
+

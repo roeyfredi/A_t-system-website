@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    direction:rtl;
+}
+
+body {
+    background-color: white;
+    font-family: "Alef Hebrew";
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.0em;
+    letter-spacing: 1px;
+    padding: 40px;
+    color: black;
+}
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.gallery-image img {
+    height: 250px;
+    width: 350px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    position: relative;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0 ,0 ,0.4);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    right: 5px;
+
+}
+
+.transparent-box {
+    height: 250px;
+    width: 350px;
+    background-color:rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+    transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+    transform: translateY(-10px);
+    opacity: 1.0;
+}
+
+.img-box:hover {
+    cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+    font-size: 0.8em;
+}
+.img_title
+{
+    font-size: 22px;
+    direction: rtl;
+    font-weight: bold;
+}
+
+.opacity-low {
+    opacity: 0.9;
+    font-size: 16px;
+    direction: rtl;
+}
