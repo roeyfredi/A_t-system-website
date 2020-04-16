@@ -1,7 +1,13 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/product_purchase_style.css"/>
 <main>
+    <?php echo form_open('Shopping_cart_controller/add_to_shopping_cart'); ?>
     <div class='container'>
         <?php $befor_discount = (int) ($product_details[0]['retail_price'] * 0.20 + $product_details[0]['retail_price']); ?>
+
+        <input type="text" style="visibility:hidden;" name="model" id="model" value="<?php echo $product_details[0]['model'] ?>" />
+        <input type="text" style="visibility:hidden;" name="product_price" id="product_price" value="<?php echo $product_details[0]['retail_price'] . ' &#8362'; ?>" />
+        <input type="text" style="visibility:hidden;" name="product_code" id="product_code" value="<?php echo $product_details[0]['product_code']; ?>" />
+
         <div class='col-md-6'>
             <?php echo '<img class="image_product" src="data:image/jpeg;base64,' . base64_encode($product_details[0]['image']) . '"/>'; ?>
         </div>
@@ -11,12 +17,13 @@
             </p> 
             <p class='product_price'>
                 <?php echo $product_details[0]['retail_price'] . ' &#8362'; ?>
+
             </p>
             <p class='product_price_before_discount'>
                 <?php echo $befor_discount . ' &#8362'; ?>
             </p>
             <p class='product_code'>
-                <?php echo 'מק"ט:'. $product_details[0]['product_code']; ?>
+                <?php echo 'מק"ט:' . $product_details[0]['product_code']; ?>
             </p>
 
             <p class='product_description'>
@@ -24,20 +31,17 @@
             </p>
 
             <p class="qty mt-5 margin_top">
-                <span class="minus bg-dark">-</span>
-                <input type="number" class="count" name="qty" value="1">
-                <span class="plus bg-dark">+</span>
+                <span class="minus bg-dark" onclick='javascript: document.getElementById("qty").value--;'>-</span>
+                <input type="number" name="qty" id="qty" value="1">
+                <span class="plus bg-dark" onclick='javascript: document.getElementById("qty").value++;'>+</span>
             </p>
+
             <p class='margin_top'>
-                <a href="#" class="btn btn-info btn-lg button_cart" onclick="user_log_in()">
+                <button type="submit" class="btn btn-info btn-lg button_cart" name="add_cart" onclick="return user_log_in()">
                     הוסף לסל <span class="glyphicon glyphicon-shopping-cart"></span>
-                </a>
+                </button>
             </p> 
-
-            <div class='button_add_to_cart'>
-
-
-            </div>
+            <?php echo form_close(); ?>
 
             <p class='product_returns'>
                 <b>מדיניות החזרת מוצרים שנרכשו באתר  </b><br>
@@ -51,12 +55,14 @@
 
         </div>
     </div>
+</form>
 
 </main>
 
 
 
 <script>
+
     function user_log_in() {
 <?php
 $userCheck = isset($_SESSION['user']);
@@ -68,28 +74,11 @@ if ($userCheck == null) {
 ?>
         var user = "<?= $val ?>";
         user = parseInt(user);
-        if (user == 0)
-        {
+        if (user == 0) {
             alert("על מנת להוסיף מוצר זה לסל, אנא בצע התחברות!");
+            return false;
         }
-        else
-        {
-
-        }
-
     }
-    $(document).ready(function () {
-        $('.count').prop('disabled', true);
-        $(document).on('click', '.plus', function () {
-            $('.count').val(parseInt($('.count').val()) + 1);
-        });
-        $(document).on('click', '.minus', function () {
-            $('.count').val(parseInt($('.count').val()) - 1);
-            if ($('.count').val() == 0) {
-                $('.count').val(1);
-            }
-        });
-    });
 
 </script>
 

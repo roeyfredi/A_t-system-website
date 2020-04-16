@@ -61,6 +61,12 @@ p{
 
 /*qty*/
 
+#qty{
+    width:5%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .qty .count {
     color: #000;
     display: inline-block;

@@ -13,6 +13,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+        <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+        <link rel="stylesheet" type="text/css" href="css/util.css">
 
     </head>
 
@@ -37,8 +42,8 @@
                             <ul class="nav navbar-nav navbar info">
 
                                 <li><a class='color_white' href="#" id="my_profile"><span class="glyphicon glyphicon-user"></span>הפרופיל שלי</a></li>
-                                <li><a href="#" id="my_cart_shopping"><span class="glyphicon glyphicon-shopping-cart"></span>הסל שלי</a></li>
-
+                                <li><a href="<?php echo site_url(); ?>/Shopping_cart_controller/shopping_cart_page" id="my_cart_shopping"><span class="glyphicon glyphicon-shopping-cart"></span>הסל שלי</a></li>
+                                
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="signin_signup"><span class="glyphicon glyphicon-log-in"></span> התחברות / הרשמה <span class="caret"></span></a>
 
                                     <ul class="dropdown-menu">

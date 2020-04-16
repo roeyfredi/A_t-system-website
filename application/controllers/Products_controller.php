@@ -72,12 +72,4 @@ class Products_controller extends CI_Controller {
         $this->load->view('products/product_page', $data);
         $this->load->view('templates/footer', $data);
     }
-
-    public function shopping_cart_page() {
-
-        $this->load->view('templates/header');
-        $this->load->view('pages/shopping_cart');
-        $this->load->view('templates/footer');
-    }
-
 }
