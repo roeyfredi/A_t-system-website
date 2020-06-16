@@ -7,16 +7,10 @@
     opacity: 0.95;
     margin-bottom: 15px;
     border-radius: 10px;
-    
+
 }
 
-.backgroundImg{
-    background-image: url("../images/backgroundContact.jpg");
-    background-color: #000;
-    background-size: 100% 100%;
-    background-repeat:no-repeat;
-    margin-top: 0px!important;
-}
+
 .upload-btn-wrapper{
     position: relative;
     overflow: hidden;
@@ -50,5 +44,20 @@ input{
 .contact_button:hover{
     background-color: #0C690C ;
     color: white;
+}
+#error{
+    text-align: center;
+    color:red;
+    text-decoration: underline;
+    font-size: 16px;
+}
+.contact_title{
+    text-align: center;
+}
+
+@media screen and (max-width: 420px){
+    #contact_submit_button{
+        margin-top: 6%;
+    }
 }
 

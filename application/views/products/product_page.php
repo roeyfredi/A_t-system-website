@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/product_purchase_style.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/product_page_style.css"/>
 <main>
     <?php echo form_open('Shopping_cart_controller/add_to_shopping_cart'); ?>
     <div class='container'>
@@ -30,17 +30,42 @@
                 <?php echo $product_details[0]['description']; ?>
             </p>
 
-            <p class="qty mt-5 margin_top">
-                <span class="minus bg-dark" onclick='javascript: document.getElementById("qty").value--;'>-</span>
-                <input type="number" name="qty" id="qty" value="1">
-                <span class="plus bg-dark" onclick='javascript: document.getElementById("qty").value++;'>+</span>
-            </p>
+            <?php if ($product_quantity[0]['quantity'] < 10 && $product_quantity[0]['quantity'] != 0) { ?>
+            
+             <p class="quantity_warning">כ-<?php print_r( $product_quantity[0]['quantity'] ) ?> יחידות ממוצר זה נשארו במלאי, מהרו להזמין!</p>
+            
 
-            <p class='margin_top'>
-                <button type="submit" class="btn btn-info btn-lg button_cart" name="add_cart" onclick="return user_log_in()">
-                    הוסף לסל <span class="glyphicon glyphicon-shopping-cart"></span>
-                </button>
-            </p> 
+            <?php }if ($product_quantity[0]['quantity'] == 0) { ?>
+                <p class="quantity_warning">מוצר זה אזל מן המלאי!</p>
+                <p class="qty mt-5 margin_top">
+
+                    <span class="minus bg-dark disabled_p_m">-</span>
+                    <input type="number" name="qty" id="qty" disabled value="1" disabled>
+                    <span class="plus bg-dark disabled_p_m">+</span>
+
+                </p>
+                <p class='margin_top'>
+                    <button type="submit" class="btn btn-info btn-lg button_cart" name="add_cart" onclick="return user_log_in()" disabled>
+                        הוסף לסל <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </button>
+                </p>
+
+            <?php } else { ?>
+
+                <p class="qty mt-5 margin_top">
+                    <span class="minus bg-dark" onclick='minus_button()'>-</span>
+                    <input type="number" name="qty" id="qty" value="1">
+                    <span class="plus bg-dark" onclick='plus_button()'>+</span>
+                </p>
+
+                <p class='margin_top'>
+                    <button type="submit" class="btn btn-info btn-lg button_cart" name="add_cart" onclick="return user_log_in()">
+                        הוסף לסל <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </button>
+                </p>
+                
+            <?php } ?>
+                
             <?php echo form_close(); ?>
 
             <p class='product_returns'>
@@ -55,7 +80,6 @@
 
         </div>
     </div>
-</form>
 
 </main>
 
@@ -79,6 +103,35 @@ if ($userCheck == null) {
             return false;
         }
     }
+    function minus_button() {
+        var minus = document.getElementById("qty").value;
+        if (minus == 1) {
+            document.getElementById("qty").value == 1;
+            return;
+        }
+        else {
+            var minus = document.getElementById("qty").value--;
+            return;
+        }
+    }
+
+    function plus_button() {
+
+        var quantity = "<?= $product_quantity[0]['quantity'] ?>";
+        quantity = parseInt(quantity);
+
+
+        var plus = document.getElementById("qty").value;
+        if (plus == quantity) {
+            document.getElementById("qty").value == quantity;
+            return;
+        }
+        else {
+            var plus = document.getElementById("qty").value++;
+            return;
+        }
+    }
+
 
 </script>
 

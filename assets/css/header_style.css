@@ -1,5 +1,5 @@
 *{
-    direction: ltr;
+    //direction: rtl;
 }
 .img_logo{
     height: 80px;
@@ -112,5 +112,24 @@ li{
     }
 }
 
+@media only screen and (max-width: 460px){
+    #my_cart_shopping{
+        margin-left: 5%;
+    } 
+}
 
+@media only screen and (max-width: 420px){
+    #my_cart_shopping{
+        margin-left: 10%;
+    }
+    .li_color{
+    color:white;
+    font-weight: bold;
+}
+}
 
+@media only screen and (max-width: 350px){
+    #my_cart_shopping{
+        margin-left: 20%;
+    } 
+}

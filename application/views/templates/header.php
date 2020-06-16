@@ -13,19 +13,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         
         <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
         <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
         <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
         <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="icon" href="<?php echo base_url(); ?>assets/images/website_icon.png" type="image/png" sizes="16x16">
+        
+
 
     </head>
 
     <body dir="rtl">
         <header>
             <div class="header">
+                <a href="<?php echo site_url(); ?>/Homepage_controller/homepage">
                 <img class="img_logo" src="<?php echo base_url(); ?>assets/images/logo.jpg"/>
                 <img class="img_logo_2" src="<?php echo base_url(); ?>assets/images/near_to_logo.jpg"/>
+                </a>
             </div>
             <div class="clear">
             </div>
@@ -41,7 +47,7 @@
 
                             <ul class="nav navbar-nav navbar info">
 
-                                <li><a class='color_white' href="#" id="my_profile"><span class="glyphicon glyphicon-user"></span>הפרופיל שלי</a></li>
+                                <li><a href="<?php echo site_url(); ?>/Customer_controller/personal_area" id="my_profile" class='color_white'><span class="glyphicon glyphicon-user"></span>הפרופיל שלי</a></li>
                                 <li><a href="<?php echo site_url(); ?>/Shopping_cart_controller/shopping_cart_page" id="my_cart_shopping"><span class="glyphicon glyphicon-shopping-cart"></span>הסל שלי</a></li>
                                 
                                 <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" id="signin_signup"><span class="glyphicon glyphicon-log-in"></span> התחברות / הרשמה <span class="caret"></span></a>
@@ -59,23 +65,17 @@
                             <div class="navbar-collapse collapse navbar-right" id="mobile_menu">
                                 <ul class="nav navbar-nav menu_a column-reverse">  
                                     <li><a id="logout" href="<?php echo site_url(); ?>/Login_controller/logout"><b>התנתקות</b></a></li>
-
-                                        <li><?php if(isset($_SESSION['user'][0]['management'])!=null){ echo '<a id="management" href="#" class="dropdown-toggle" data-toggle="dropdown">ניהול<span class="caret"></span></a>';}?>
-
-                                        <ul class="dropdown-menu right text_to_the_right">
-                                            <div class="text_to_the_right">
-                                                <li><a class="li_color" href="#">ניהול לקוחות</a></li>
-                                                <li><a class="li_color" href="<?php echo site_url(); ?>/Management_controller/products_management">ניהול מלאי</a></li>
-                                            </div>
-                                        </ul>
+                                      
+                          
+                                        <li><?php if(isset($_SESSION['user'][0]['management'])!=null){ echo '<a id="management" href=' .site_url(). '/Management_controller/management_welcome_page><b>ניהול</b></a>';}?>
                                     </li>
-                                    <li><a href="<?php echo site_url(); ?>/Contact_controller/contact">צור קשר</a></li>
-                                    <li><a href="#">מי אנחנו</a></li>
+                                    <li><a href="<?php echo site_url(); ?>/Customer_controller/contact"><b>צור קשר</b></a></li>
+                                    <li><a href="#footer"><b>מי אנחנו</b></a></li>
 
-                                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">מוצרים <span class="caret"></span></a>
+                                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>מוצרים</b> <span class="caret"></span></a>
                                         <ul class="dropdown-menu right text_to_the_right">
                                             <div class="text_to_the_right">
-                                                <li><a class="li_color" href="<?php echo site_url(); ?>/Products_controller/multi_media_systems_page">מערכות מולטימדיה לרכב</a></li>
+                                                <li><a class="li_color" href="<?php echo site_url(); ?>/Products_controller/multi_media_systems_page">מערכות מולטימדיה</a></li>
                                                 <li><a class="li_color" href="<?php echo site_url(); ?>/Products_controller/seat_coverings_page">כיסויי מושבים</a></li>
                                                 <li><a class="li_color" href="<?php echo site_url(); ?>/Products_controller/batteries_and_electronics_page">מצברים ואלקטרוניקה</a></li>
                                                 <li><a class="li_color" href="<?php echo site_url(); ?>/Products_controller/car_accessories_page">אביזרים לרכב</a></li>

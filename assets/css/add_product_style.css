@@ -1,6 +1,7 @@
 *{ 
     font-family: 'Alef', sans-serif;
 }
+
 .center {
     margin: auto;
     width: 50%;
@@ -30,6 +31,14 @@ input::placeholder{
     text-align: center;
     margin-bottom: 5%;
 }
+
+.dropdown_product_type{
+    width:300px;
+}
+.dropdown_product_type option{
+    width:300px;
+}
+
 #productregister{
     width:100%;
     padding: 14px;
@@ -39,4 +48,13 @@ input::placeholder{
 }
 #productregister:hover { 
     background-color: #A9A9A9;
+}
+.subtitle{
+    text-align: center;
+}
+
+@media screen and (max-width: 420px){
+    #productregister{
+        margin-top: 6%;
+    }
 }

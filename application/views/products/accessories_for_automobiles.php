@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/products_page_style.css"/>
 <main>
     <div class="container">
-        <h2>אביזרי קמפינג לרכב</h2>
+        <h2 class="products_page_title">אביזרי קמפינג לרכב</h2>
         <div class="row">
             <?php
             foreach ($accessories_for_automobiles as $product) {
@@ -22,8 +22,8 @@
                         <h3><b><?php echo $product['retail_price'] ?> &#8362 </b></h3>
 
                         <br>
-                        <a href="<?php echo site_url(); ?>/Products_controller/product_page?product_code=<?php echo $product['product_code'] ?>"
-                           <p><button>לפרטים נוספים</button></p>
+                        <a  href="<?php echo site_url(); ?>/Products_controller/product_page?product_code=<?php echo $product['product_code'] ?>"
+                            <p><button>לפרטים נוספים</button></p>
                         </a>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/products_page_style.css"/>
 <main>
     <div class="container">
-        <h2>אביזרים לפלאפון</h2>
+        <h2 class="products_page_title">אביזרים לפלאפון</h2>
         <div class="row">
             <?php
             foreach ($pelephone_accessories as $product) {

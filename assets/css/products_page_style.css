@@ -8,7 +8,7 @@
     box-shadow: 0 4px 8px 10px rgba(0, 0, 0, 0.2);
     width: 300px;
     max-height: 400px;
-    
+
     margin: auto;
     text-align: center;
     font-family: arial;
@@ -46,13 +46,51 @@ h4{
     text-decoration-line: line-through;
     opacity: 0.5;
 }
+.products_page_title{
+    text-align: center;
+}
 
 @media only screen and (max-width: 659px){
-    
+
     .card_to_right{
         float:none;
         margin-bottom: 10%;
     }
+}
+
+@media (max-width: 420px){
+    .card{
+        width: 67%;
+        height: 300px; 
+        max-height: 350px;
+        margin-bottom: 20%;
+    }
+    .showImg{
+        width:100px;
+        height:100px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    .card button{
+        position: absolute;
+        padding: 4px;
+        width: 62%;
+        top:90%;
+        left:19%;              
+    }
+    .products_page_title{
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
 }
 
 

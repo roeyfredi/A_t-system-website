@@ -1,0 +1,32 @@
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+.pay_submit{
+    width:100%;
+    padding: 14px;
+    border-radius: 5px;
+    background-color: #FFC439;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    margin-bottom: 10%;
+}
+.pay_submit:hover { 
+    background-color: #708090;
+}
+
+@media (max-width: 420px){
+    .cancel_img{
+        width:150px;
+    }
+    .pay_submit{
+        padding: 2px;
+        font-size: 16px;
+    }
+}

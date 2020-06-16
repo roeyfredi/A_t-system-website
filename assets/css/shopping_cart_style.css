@@ -4,50 +4,20 @@
 
 .empty_cart{
     text-align: center;
+    margin-top: 2%;
     font-size: 22px;
     font-weight: bold;
     padding:10px;
-    background-color: red;
+    color: red;
 }
 .center {
     margin: auto;
     width: 100%;
     padding: 10px;
 }
-/*
-
-.shopping_cart_table{
-    margin-bottom: 5%;
-}
-
-.serial_number_td{
-    width:8%;
-}
-
-.product_name_td{
-    width:25%;
-}
-
-.total_price_td{
-    width:10%;
-}
-
-.delete_product_td{
-    margin-left: 10%;
-}
-
-.total_payment_td{
-    width:30%;
-}*/
-
-
-
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
-
-
-
 
 
 
@@ -59,9 +29,6 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-}
 
 /* ------------------------------------ */
 a {
@@ -93,9 +60,7 @@ ul, li {
 
 /* ------------------------------------ */
 input {
-    display: block;
-    outline: none;
-    border: none !important;
+
 }
 
 textarea {
@@ -136,8 +101,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 
-input[type="text"]{
-
+.quantity_input{
     background-color : #D3D3D3; 
 
 }
@@ -293,6 +257,8 @@ tbody tr:hover {
     font-weight: bold;
     font-size: 20px;
     color:white;
+    outline: none;
+    border: none !important;
 }
 .button_paymant:hover,.clean_cart_button:hover,.update_cart_button:hover{
     background-color: #778899; 
@@ -319,6 +285,103 @@ tbody tr:hover {
     font-weight: bold;
     color:white;
 }
+
+.title_of_purchase{
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.supply_buttons_title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.payment_option_title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+.center_payment_div{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.payment_div{
+    width:60%;
+    height: 50%;
+    margin-bottom: 5%;
+    margin-right: 20%;
+    clear:both;
+    border-radius: 10%;
+    background-color: #F8F8FF;
+    border:solid 1px #FFA07A;
+}
+.radio_right{
+    text-align: right;
+    margin-right: 7%;
+    font-size: 16px;
+}
+
+
+
+.lab{
+    font-size: 16px;
+    width:40%;
+    text-align: right;
+}
+.inputs_payment{
+    display: inline;
+    width: 45%;
+    height: 25px;  
+    border-radius: 5px;
+    margin-bottom: 2%;
+    height: 35px;
+}
+.cardLab{
+    display: block;
+}
+select{
+    height: 35px !important;
+    border-radius: 5px;
+}
+
+
+.col-3{
+    display: inline-block;
+}
+
+.payment_time{
+    margin-right: 20%;
+}
+.pay_submit{
+    width:100%;
+    padding: 14px;
+    border-radius: 5px;
+    background-color: #FFC439;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+    border: none;
+    margin-bottom: 10%;
+}
+.pay_submit:hover { 
+    background-color: #708090;
+}
+
+.empty_shopping_cart_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+
 
 @media screen and (max-width: 992px) {
 
@@ -378,28 +441,28 @@ tbody tr:hover {
     table tbody tr td:nth-child(7):before {
 
     }
-    .column1,
-    .column2,
-    .column3,
-    .column4,
-    .column5,
-    .column6,
-    .column7{
+    .column1,.column2,.column3,.column4,.column5,.column6,.column7{
         width: 100%;
     }
 
     tbody tr {
         font-size: 14px;
     }
-    .clean_cart{
+    .clean_cart_button{
         font-size: 10px;
+        width:40%;
+        margin-right: 6%;
     }
-    .update_cart{
+    .update_cart_button{
         font-size: 10px;
         white-space: normal;
+        width:40%;
+        margin-right: 6%;
     }
     .button_paymant{
-         font-size: 15px;
+        font-size: 15px;
+        width:90%;
+        margin-left: 5%;
     }
     .total_payment{
         margin-bottom: 2%;
@@ -409,5 +472,38 @@ tbody tr:hover {
     .container-table100 {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+@media (max-width: 420px){
+    .column1,.column2,.column3,.column4,.column5,.column6,.column7{
+        padding-right: 15%;
+    }
+
+    .button_paymant{
+        margin-top:3%;
+        margin-right: 10%;
+
+    }
+    .payment_div{
+        width:95%;
+        margin-bottom: 5%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .radio_right{
+        font-size: 12px;
+        margin-right: 2%;
+        width:100%;
+    }
+    .mobile_view_label{
+        display: inline;
+    }
+    .pay_submit{
+        padding: 2px;
+        font-size: 16px;
+    }
+    .center_payment_div{
+    width: 90%;
     }
 }

@@ -1,0 +1,673 @@
+*{
+    font-family: "Alef Hebrew";
+    text-align: right;
+    direction: rtl;
+}
+
+h3 {
+    font-family: "Lucida Grande", "Lucida", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.personal_area_p{
+    font-weight: bold;
+    font-size: 18px;
+    display:inline-block;
+    margin-right: 4%;
+    width:10%;
+}
+.details_of_customer{
+    display:inline-block;
+    font-size: 18px;
+    margin-right: 4%;
+
+    width:15%;
+}
+
+#tabContent {
+    width: 95%;
+
+    padding: 0px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+/* Horizontal Tabs */
+
+div.tabcontent {
+    display: block;
+}
+
+div.tabcontents {
+    display: inline-block;
+    width: 98%;
+    padding: 5px 10px;
+    padding-bottom: 15px;
+    background-color: #f4f5f5;
+}
+
+ul.tabs {
+    padding: 7px 0;
+    margin: 0;
+    font-size: 0;
+    list-style-type: none;
+    text-align: right; /* set to left, center, or right to align the tabs as desired */
+    padding-left: 20px; /* Offset of the first tab */
+
+}
+
+ul.tabs li {
+    display: inline;
+    margin: 10px; /* distance between tabs */
+    background: black; /* selected tab color */
+    margin-left: -4px;
+}
+
+ul.tabs li a {
+    font-size: 22px;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    padding: 7px 12px; /* second attribute controls distance right&left of tab text */
+    color: white;
+    font-weight: bold;
+    outline: none;
+    background: #FFD700; /* tab color #cbe6e2*/
+    border: 1px solid #ccc;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+/*Note: IE8 and earlier doesn't support li:last-child. You have to add another class to the last tab (LI) and specify its border-right as below.*/
+ul.tabs li:last-child a {
+    border-right: 1px solid #ccc;
+}
+
+ul.tabs li a:hover {
+    color: #000;
+    background: #708090; /* tab hover color */
+}
+
+ul.tabs li.selected a {
+    /*selected tab style */
+    top: 0px;
+    font-weight: bold;
+    background: #778899;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    color: white;
+}
+
+ul.tabs li.selected a:hover {
+    /*selected tab style */
+    text-decoration: none;
+}
+
+/* Chart Tabs */
+
+#chartLinks {
+    display: inline-block;
+    /* width: 130px; */
+    /* padding: 5px 5px; */
+    padding-bottom: 5px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#chartContent {
+    display: inline-block;
+    width: 75%;
+    padding-bottom: 15px;
+    float: left;
+    border: 1px solid #ccc;
+}
+
+#tempdiv_a {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_b {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_c {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_d {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_e {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_f {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_g {
+    display: none;
+    text-align: center;
+}
+
+#tempdiv_h {
+    display: none;
+    text-align: center;
+}
+
+ul.chartTabs {
+    padding: 7px 0;
+    margin: 0;
+    font-size: 0;
+    list-style-type: none;
+    text-align: left; /* set to left, center, or right to align the tabs as desired */
+    padding-left: 0px; /* Offset of the first tab */
+}
+
+ul.chartTabs li {
+    display: block;
+    margin: 18px; /* vert distance between tabs */
+    background: White; /* selected tab color */
+    /* margin-left: -4px; */
+    text-align: right;
+}
+
+ul.chartTabs li a {
+    font: normal 12px Verdana;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    padding: 7px 12px; /* second attribute controls distance right&left of tab text */
+    color: #000;
+    outline: none;
+    background: #ddf2f2; /* tab color #cbe6e2*/
+    border: 1px solid #ccc;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 5px;
+    -webkit-border-radius: 5px 0px 0px 5px;
+    border-radius: 5px 0px 0px 5px;
+}
+/*Note: IE8 and earlier doesn't support li:last-child. You have to add another class to the last tab (LI) and specify its border-right as below.*/
+ul.chartTabs li:last-child a {
+    border-right: 1px solid #ccc;
+}
+
+ul.chartTabs li a:hover {
+    color: #000;
+    background: #b4dad4; /* tab hover color */
+}
+
+ul.chartTabs li.selected a {
+    /*selected tab style */
+    top: 0px;
+    font-weight: bold;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    color: #000;
+}
+
+ul.chartTabs li.selected a:hover {
+    /*selected tab style */
+    text-decoration: none;
+}
+
+
+.center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+* {
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* ------------------------------------ */
+a {
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ------------------------------------ */
+h1,h2,h3,h4,h5,h6 {margin: 0px;}
+
+p {margin: 0px;}
+
+ul, li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+/* ------------------------------------ */
+
+textarea {
+    display: block;
+    outline: none;
+}
+
+/* ------------------------------------ */
+
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utiliti ]*/
+
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Table ]*/
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-table100 {
+    width: 70%;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+    margin-bottom: 5%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.wrap-table100 {
+    width: 1170px;
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+table * {
+    position: relative;
+}
+table td, table th {
+    padding-left: 8px;
+}
+table thead tr {
+    height: 60px;
+    background: #36304a;
+}
+table tbody tr {
+    height: 50px;
+}
+table tbody tr:last-child {
+    border: 0;
+}
+table td, table th {
+    text-align: left;
+}
+table td.l, table th.l {
+    text-align: right;
+}
+table td.c, table th.c {
+    text-align: center;
+}
+table td.r, table th.r {
+    text-align: center;
+}
+
+
+
+.table100-head th{
+    font-size: 18px;
+    color: #000;
+    line-height: 1.2;
+    font-weight: unset;
+    background-color:#FFA07A;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr {
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.column1 {
+    width: 2%;
+    text-align: center;
+
+}
+
+.column2 {
+    width: 4%;
+    text-align: center;
+}
+
+.column3 {
+    width: 1%;
+    text-align: center;
+}
+
+.column4 {
+    width: 2%;
+    text-align: center;
+}
+
+.column5 {
+    width: 5%;
+    text-align: center;
+}
+.column6 {
+    width: 5%;
+    text-align: center;
+}
+.hiddenRow {
+    padding: 0 4px !important;
+    background-color: #F8F8F8;
+    font-size: 13px;
+    text-align: right;
+}
+
+#search_input{
+    width:100%;
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 10%;
+}
+
+.order_details p{
+    font-size: 16px;
+    margin-right: 16%;
+    color:black;
+}
+.product_image{
+    width:70px;
+    height:70px;
+    float:left;
+    margin-left: 30%;
+}
+
+#number_of_product{
+    font-size: 16px;
+    color:black;
+    float:right;
+    position:absolute;
+    right:40px;
+    font-weight: bold;
+}
+.confirm{
+    color:green;
+}
+.not_confirm{
+    color: red;
+}
+#button_details:hover{
+    cursor: pointer;
+    color:black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.confirm_button{
+    width:90%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #f3c623;
+    font-weight: bold;
+    color:white;
+}
+.confirm_button:hover{
+    background-color: #778899; 
+}
+.order_number{
+    height: 0px;
+    width:0px;
+    visibility:hidden;
+}
+.order_confirm_p{
+    color:green;
+    display: inline;
+}
+.confirm_for_mobile_device{
+    font-size: 12px;
+    color:green;
+    font-weight: bold;
+    display:block;
+}
+.not_confirm_for_mobile_device{
+    font-size: 12px;
+    color:red;
+    font-weight: bold;
+    display:block;
+}
+
+.img_box{
+    position: absolute;
+
+    left:80px;
+    height: 50px;
+    width:50px;
+}
+
+@media screen and (max-width: 850px) {
+
+    table {
+        display: block;
+    }
+
+    table > *, table tr, table td, table th {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        height: auto;
+        padding: 37px 0;
+    }
+    table tbody tr td {
+        margin-bottom: 24px;
+        text-align: center !important;
+    }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+    }
+    table tbody tr td:before {
+        font-size: 14px;
+        color: #999999;
+        line-height: 1.2;
+        font-weight: unset;
+        position: absolute;
+        width: 40%;
+        right: 0;
+        top: 0;
+        text-align: right;
+        margin-right: 3%;
+    } 
+    table tbody tr.order_details_tr td:nth-child(1):before {
+        content: 'מספר הזמנה';
+        color:black;
+        font-weight: bold;
+    }
+    table tbody tr td:nth-child(2):before {
+        content: "תאריך הזמנה";
+        color:black;
+        font-weight: bold;
+    }
+    table tbody tr td:nth-child(3):before {
+        content: 'מחיר הזמנה';
+        color:black;
+        font-weight: bold;
+    }
+    table tbody tr td:nth-child(4):before {
+        content: "סטטוס הגעת הזמנה";
+        color:black;
+        font-weight: bold;
+    }
+    table tbody tr td:nth-child(5):before {
+        content: "אישור הזמנה";
+        color:black;
+        font-weight: bold;
+    }
+    table tbody tr td:nth-child(6):before {
+        content: "פרטי הזמנה";
+        color:black;
+        font-weight: bold;
+    } 
+    table tbody tr td div:nth-child(7):after {
+        content: '';
+    }
+
+    .column1,
+    .column2,
+    .column3,
+    .column4,
+    .column5,
+    .column6 {
+        width: 100%;
+        padding-right: 15%;
+    }
+    tbody tr {
+        font-size: 14px;
+    }
+    .confirm_button{
+        width:40%;
+        margin-right: 5%;
+    }
+    .order_confirm_p{
+        margin-right: 12%;
+    }
+    .product_image{
+        display:none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-table100 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 420px){
+    table tbody tr td:before {
+        font-size: 12px;
+    }
+    .column1,.column2,.column3,.column4,.column5,.column6 {
+        width: 100%;
+        font-size: 12px;
+        padding-right: 40%;
+
+    }
+    .personal_area_p{
+        width:40%;
+    }
+
+    .details_of_customer{
+        width:50%;
+    }
+    #number_of_product{
+        font-size: 16px;
+        color:black;
+        float:right;
+        position:absolute;
+        right:0px;
+    }
+    .products_in_order_mobile p{
+        font-size: 10px; 
+    }
+    div.products_in_order_mobile > p{
+        font-size: 12px;
+    }
+    .img_box{
+        left:25px;
+    }
+}
+

@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/products_page_style.css"/>
 <main>
     <div class="container">
-        <h2>מערכות מולטימדיה לרכב</h2>
+        <h2 class="products_page_title">מערכות מולטימדיה לרכב</h2>
         <div class="row">
             <?php
             foreach ($multimedia_systems_products as $product) {

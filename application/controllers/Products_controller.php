@@ -63,6 +63,7 @@ class Products_controller extends CI_Controller {
 
         $product_code = $this->input->get('product_code');
         $product = $this->Products_model->get_product_by_product_code($product_code);
+        $data['product_quantity']=$this->Products_model->get_proudct_quantity($product_code);
 
         $data['title'] = '';
         $data['user'] = null;

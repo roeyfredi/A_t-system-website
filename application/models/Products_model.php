@@ -8,19 +8,16 @@ class Products_model extends CI_Model {
         $this->load->database();
     }
 
-    public function save_product($data) {
-        $this->db->db_debug = FALSE;
-
-        $error = NULL;
-        if (!$this->db->insert('products', $data)) {
-            $error = $this->db->error();
-        }
-
-        return $error;
-    }
-
     public function get_products() {
         $query = $this->db->query("select * from products");
+        if ($query) {
+            return $query->result_array();
+        }
+        return false;
+    }
+
+    public function get_proudct_quantity($product_code) {
+        $query = $this->db->query("select quantity from quantity_in_stock where product_code_fk='" . $product_code . "'");
         if ($query) {
             return $query->result_array();
         }

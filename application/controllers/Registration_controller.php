@@ -52,6 +52,7 @@ class Registration_controller extends CI_Controller {
             $error = "";
             if (!$_POST['first_name'] || !$_POST['last_name'] || !$_POST['phone'] || !$_POST['email'] || !$_POST['username'] || !$_POST['password'] || !$_POST['passwordConf'] || !$_POST['city'] || !$_POST['adress']) {
                 $error.="אין להשאיר שדות ריקים" . '<br>';
+                return $error;
             }
             if (!preg_match("/^[א-ת ]*$/", $_POST['first_name'])) {
                 $error.="שם פרטי יכול להכיל אותיות בעברית בלבד" . '<br>';
@@ -80,9 +81,11 @@ class Registration_controller extends CI_Controller {
             if (!preg_match("/^[א-ת ]*$/", $_POST['city'])) {
                 $error.="שם העיר יכול להכיל אותיות בעברית בלבד" . '<br>';
             }
-            if ((!preg_match("/^[א-ת ]*$/", $_POST['adress'])) && (!preg_match("/^[0-9 ]*$/", $_POST['adress']))) {
-                $error.="כתובת יכולה להכיל אותיות בעברית בלבד" . '<br>';
+
+            if(preg_match("/^[a-zA-Z]*$/", $_POST['adress'])){
+                $error.="הכתובת שהוזנה לא חוקית".'<br>';
             }
+
         }
         return $error;
     }
